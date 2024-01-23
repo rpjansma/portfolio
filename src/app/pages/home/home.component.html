@@ -1,10 +1,175 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-</head>
-<body>
-<h1>Portfolio</h1>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  </head>
+  <body>
+    <section id="about">
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-6">
+            <h1 class="mb-4">Software Engineer Raul Paes</h1>
+            <p>I'm building this portfolio of a lot of cool things I did :)</p>
 
-</body>
+            <div class="mt-4">
+              <a
+                href="https://www.linkedin.com/in/raul-paes"
+                target="_blank"
+                class="btn btn-primary me-2"
+                >LinkedIn</a
+              >
+              <a
+                href="https://github.com/rpjansma"
+                target="_blank"
+                class="btn btn-dark"
+                >GitHub</a
+              >
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <form>
+              <h3 class="mb-3">Email Me!</h3>
+
+              <div class="mb-3">
+                <label for="name" class="form-label">Your Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Name Middle Last"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label">Your Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="your-name@gmail.com"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="message" class="form-label">Your Message</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="4"
+                  placeholder="Write your message here"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-success">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="bg-light py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">My Projects</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <img
+                src="../../assets/mars-rover.jpg"
+                class="card-img-top mx-auto"
+                alt="Mars Rover"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Mars Rover</h5>
+                <p class="card-text">
+                  Successfully tackled the Mars Rovers kata using Java, devoid
+                  of any frameworks
+                </p>
+                <a
+                  href="https://github.com/rpjansma/mars-rovers"
+                  target="_blank"
+                  class="btn btn-primary"
+                  >Details</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card">
+              <img
+                src="../../assets/calendar.jpg"
+                class="card-img-top mx-auto"
+                alt="Events Backend"
+              />
+              <div class="card-body">
+                <h5 class="card-title">User and Events Manager</h5>
+                <p class="card-text">
+                  Node.js-powered Rest API for Events and Authentication.
+                  Seamlessly manage event creation, editing, and deletion.
+                  Additionally, leverage the authentication feature for user
+                  validation
+                </p>
+                <a
+                  href="https://github.com/rpjansma/events"
+                  target="_blank"
+                  class="btn btn-primary"
+                  >Details</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card">
+              <img
+                src="../../assets/financial-indexes.jpg"
+                class="card-img-top mx-auto"
+                alt="Events Backend"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Echo</h5>
+                <p class="card-text">
+                  Angular 12-based interface for monitoring financial indexes, driven by the Events API
+                </p>
+                <a
+                  href="https://github.com/rpjansma/echo"
+                  target="_blank"
+                  class="btn btn-primary"
+                  >Details</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Skills</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Programming Languages</h4>
+                    <ul class="skills-list">
+                        <li>Kotlin/Java <span class="badge badge-primary">Advanced</span></li>
+                        <li>JavaScript/Typescrypt <span class="badge badge-warning">Intermediate</span></li>
+                        <li>HTML/CSS <span class="badge badge-info">Intermediate</span></li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h4>Frameworks and Libraries</h4>
+                    <ul class="skills-list">
+                        <li>Spring <span class="badge badge-success">Advanced</span></li>
+                        <li>Angular <span class="badge badge-danger">Intermediate</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+  </body>
 </html>
