@@ -6,10 +6,11 @@ import { RouterModule } from '@angular/router';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
+import { NgxMailtoModule } from 'ngx-mailto';
 
 @NgModule({
   declarations: [HomeComponent],
-  imports: [CommonModule, ReactiveFormsModule, RouterModule, HomeRoutingModule],
+  imports: [CommonModule, ReactiveFormsModule, RouterModule, HomeRoutingModule, NgxMailtoModule],
   exports: [HomeComponent],
 })
 export class HomeModule {}

@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
     <section id="about">
@@ -30,12 +29,13 @@
           </div>
 
           <div class="col-md-6">
-            <form>
+            <form [formGroup]="emailForm" (submit)="open()">
               <h3 class="mb-3">Email Me!</h3>
 
               <div class="mb-3">
                 <label for="name" class="form-label">Your Name</label>
                 <input
+                  formControlName="name"
                   type="text"
                   class="form-control"
                   id="name"
@@ -44,18 +44,9 @@
               </div>
 
               <div class="mb-3">
-                <label for="email" class="form-label">Your Email</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  placeholder="your-name@gmail.com"
-                />
-              </div>
-
-              <div class="mb-3">
                 <label for="message" class="form-label">Your Message</label>
                 <textarea
+                  formControlName="message"
                   class="form-control"
                   id="message"
                   rows="4"
@@ -63,7 +54,18 @@
                 ></textarea>
               </div>
 
-              <button type="submit" class="btn btn-success">
+              <button
+                type="submit"
+                class="btn btn-success"
+                [attr.href]="
+                  'mailto:rpjansma@gmail.com?subject=' +
+                  'New Message From ' +
+                  emailForm.get('name')?.value +
+                  '&body=' +
+                  emailForm.get('message')?.value
+                "
+                onclick="window.open(this.getAttribute('href'), '_blank'); return false;"
+              >
                 Send Message
               </button>
             </form>
@@ -134,7 +136,8 @@
               <div class="card-body">
                 <h5 class="card-title">Echo</h5>
                 <p class="card-text">
-                  Angular 12-based interface for monitoring financial indexes, driven by the Events API
+                  Angular 12-based interface for monitoring financial indexes,
+                  driven by the Events API
                 </p>
                 <a
                   href="https://github.com/rpjansma/echo"
@@ -150,26 +153,35 @@
     </section>
 
     <section id="skills" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Skills</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <h4>Programming Languages</h4>
-                    <ul class="skills-list">
-                        <li>Kotlin/Java <span class="badge badge-primary">Advanced</span></li>
-                        <li>JavaScript/Typescrypt <span class="badge badge-warning">Intermediate</span></li>
-                        <li>HTML/CSS <span class="badge badge-info">Intermediate</span></li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <h4>Frameworks and Libraries</h4>
-                    <ul class="skills-list">
-                        <li>Spring <span class="badge badge-success">Advanced</span></li>
-                        <li>Angular <span class="badge badge-danger">Intermediate</span></li>
-                    </ul>
-                </div>
-            </div>
+      <div class="container">
+        <h2 class="text-center mb-4">Skills</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <h4>Programming Languages</h4>
+            <ul class="skills-list">
+              <li>
+                Kotlin/Java <span class="badge badge-primary">Advanced</span>
+              </li>
+              <li>
+                JavaScript/Typescrypt
+                <span class="badge badge-warning">Intermediate</span>
+              </li>
+              <li>
+                HTML/CSS <span class="badge badge-info">Intermediate</span>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h4>Frameworks and Libraries</h4>
+            <ul class="skills-list">
+              <li>Spring <span class="badge badge-success">Advanced</span></li>
+              <li>
+                Angular <span class="badge badge-danger">Intermediate</span>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
     </section>
   </body>
 </html>
