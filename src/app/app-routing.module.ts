@@ -5,11 +5,18 @@ import { NotFoundComponent } from './pages/errors/not-found/not-found.component'
 
 
 const routes: Routes = [
-   {
+
+
+
+  {
     path: '',
     loadChildren: () => import('./pages/home/home.module').then(module => module.HomeModule)
   },
 
+   {
+    path: 'product',
+    loadChildren: () => import('./pages/productLandingPage/product.module').then(module => module.ProductModule)
+  },
 
   {
     path: '**',

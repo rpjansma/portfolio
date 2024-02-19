@@ -10,3 +10,9 @@ a{
 .gradient-color{
   background: linear-gradient(to bottom,  rgb(255, 255, 255), rgb(228, 228, 228), #afafaff3);
 }
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
