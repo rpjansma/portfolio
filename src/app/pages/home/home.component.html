@@ -10,7 +10,9 @@
         <div class="row">
           <div class="col-md-6">
             <h1 class="display-4 mb-1 principal-greetings">Hey,</h1>
-            <h4 class="mb-4 second-greetings">Let's build something awesome?</h4>
+            <h4 class="mb-4 second-greetings">
+              Let's build something awesome?
+            </h4>
 
             <p class="lead">
               Hello, I'm <strong>Raul Paes</strong>, a seasoned software
@@ -49,6 +51,10 @@
                   id="name"
                   placeholder="Name"
                 />
+                <error-message
+                  *ngIf="isRequiredAndTouched('name')"
+                  text="Name is required"
+                ></error-message>
               </div>
 
               <div class="mb-3">
@@ -60,6 +66,10 @@
                   rows="4"
                   placeholder="Write your message here"
                 ></textarea>
+                <error-message
+                  *ngIf="isRequiredAndTouched('message')"
+                  text="Message is required"
+                ></error-message>
               </div>
 
               <button
@@ -83,187 +93,11 @@
     </section>
 
     <section id="projects" class="bg-light py-5">
-      <div class="container">
-        <h2 class="text-center mb-4">My Projects</h2>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card">
-              <img
-                src="../../assets/mars-rover.jpg"
-                class="card-img-top mx-auto"
-                alt="Mars Rover"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Mars Rover</h5>
-                <p class="card-text">
-                  Successfully tackled the Mars Rovers kata using Java, devoid
-                  of any frameworks
-                </p>
-                <a
-                  href="https://github.com/rpjansma/mars-rovers"
-                  target="_blank"
-                  class="btn btn-primary"
-                  >Details</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card">
-              <img
-                src="../../assets/calendar.jpg"
-                class="card-img-top mx-auto"
-                alt="Events Backend"
-              />
-              <div class="card-body">
-                <h5 class="card-title">User and Events Manager</h5>
-                <p class="card-text">
-                  Node.js-powered Rest API for Events and Authentication.
-                  Seamlessly manage event creation, editing, and deletion.
-                  Additionally, leverage the authentication feature for user
-                  validation
-                </p>
-                <a
-                  href="https://github.com/rpjansma/events"
-                  target="_blank"
-                  class="btn btn-primary"
-                  >Details</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card">
-              <img
-                src="../../assets/echo.png"
-                class="card-img-top mx-auto"
-                alt="Events Backend"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Echo</h5>
-                <p class="card-text">
-                  Angular 12-based interface for monitoring financial indexes,
-                  driven by the Events API
-                </p>
-                <a
-                  href="https://github.com/rpjansma/echo"
-                  target="_blank"
-                  class="btn btn-primary"
-                  >Details</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <projects></projects>
     </section>
 
     <section id="skills" class="py-5 bg-light">
-      <div class="container">
-        <h2 class="text-center mb-4">Main Skills</h2>
-        <div class="row">
-          <div class="col-md-3">
-            <div class="card shadow-sm mb-4">
-              <div class="card-body">
-                <h4 class="card-title">Programming Languages</h4>
-                <ul class="list-unstyled">
-                  <li>
-                    Kotlin/Java
-                    <span class="badge rounded-pill bg-success">Advanced</span>
-                  </li>
-                  <li>
-                    TypeScript
-                    <span class="badge rounded-pill bg-primary"
-                      >Intermediate</span
-                    >
-                  </li>
-                  <li>
-                    HTML/CSS
-                    <span class="badge rounded-pill bg-primary"
-                      >Intermediate</span
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card shadow-sm mb-4">
-              <div class="card-body">
-                <h4 class="card-title">Frameworks and Libraries</h4>
-                <ul class="list-unstyled">
-                  <li>
-                    Spring Echosystem
-                    <span class="badge rounded-pill bg-success">Advanced</span>
-                  </li>
-                  <li>
-                    Angular
-                    <span class="badge rounded-pill bg-primary"
-                      >Intermediate</span
-                    >
-                  </li>
-                  <li>
-                    RxJS
-                    <span class="badge rounded-pill bg-primary"
-                      >Intermediate</span
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card shadow-sm mb-4">
-              <div class="card-body">
-                <h4 class="card-title">DevOps</h4>
-                <ul class="list-unstyled">
-                  <li>
-                    Jenkins
-                    <span class="badge rounded-pill bg-success">Advanced</span>
-                  </li>
-                  <li>
-                    AWS
-                    <span class="badge rounded-pill bg-primary"
-                      >Intermediate</span
-                    >
-                  </li>
-                  <li>
-                    Azure Cloud/Devops
-                    <span class="badge rounded-pill bg-primary"
-                      >Intermediate</span
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card shadow-sm mb-4">
-              <div class="card-body">
-                <h4 class="card-title">Communication Protocols</h4>
-                <ul class="list-unstyled">
-                  <li>
-                    HTTP
-                    <span class="badge rounded-pill bg-success">Advanced</span>
-                  </li>
-                  <li>
-                    Kafka Messaging
-                    <span class="badge rounded-pill bg-success">Advanced</span>
-                  </li>
-                  <li>
-                    SOAP
-                    <span class="badge rounded-pill bg-primary"
-                      >Intermediate</span
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <skills></skills>
     </section>
   </body>
 </html>

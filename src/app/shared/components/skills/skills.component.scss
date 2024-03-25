@@ -1,0 +1,117 @@
+/* General Styles */
+body {
+  background-color: #f3f3f3;
+  color: #212529;
+}
+
+.container {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 30px 5px;
+  margin: 10px 0;
+}
+
+h2 {
+  color: #4b4b4b;
+}
+
+h3 {
+  text-shadow: #000000;
+  text-overflow: initial;
+  font-weight: 900;
+}
+strong {
+  font-weight: 900;
+}
+
+/* Buttons */
+.btn {
+  font-weight: 600;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-dark {
+  background-color: #343a40;
+  border-color: #343a40;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+/* Forms */
+form {
+  background: linear-gradient(
+    90deg in hsl shorter hue,
+    #ff7e5e85,
+    #ff996681,
+    rgba(255, 129, 98, 0.404)
+  );
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: whitesmoke;
+  font-weight: 600;
+}
+
+::placeholder {
+  font-weight: 400;
+  color: #29292925;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .container {
+    padding: 40px;
+  }
+
+  section {
+    padding: 40px 10px;
+  }
+}
+
+/* Lists */
+.skills-list {
+  list-style: none;
+  padding: 0;
+}
+
+.skills-list li {
+  margin-bottom: 10px;
+}
+
+/* Greetings */
+.principal-greetings,
+.second-greetings {
+  font-weight: bolder;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.principal-greetings {
+  background-image: linear-gradient(
+    to right,
+    #f77979,
+    #ff9966,
+    #ff9966,
+    #ff5e61
+  );
+}
+
+.second-greetings {
+  background-image: linear-gradient(to right, #545454, #797979);
+  text-shadow: #000000;
+}

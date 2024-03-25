@@ -33,5 +33,11 @@ export class HomeComponent implements OnInit {
     this.mailtoService.compose(mailto);
   }
 
+  isRequiredAndTouched(control: string) {
+    return (
+      !this.emailForm.get(control)?.valid && this.emailForm.get(control)?.touched
+    );
+  }
+
   ngOnInit(): void {}
 }
