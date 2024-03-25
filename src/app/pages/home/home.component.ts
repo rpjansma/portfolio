@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
     private formBuilder: FormBuilder
   ) {
     this.emailForm = this.formBuilder.group({
-      email: ['', Validators.required],
+      email: [''],
       name: ['', Validators.required],
       message: ['', Validators.required],
     });

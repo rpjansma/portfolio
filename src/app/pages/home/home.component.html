@@ -83,6 +83,7 @@
                   emailForm.get('message')?.value
                 "
                 onclick="window.open(this.getAttribute('href'), '_blank'); return false;"
+                [disabled]="emailForm.invalid"
               >
                 Send Message
               </button>
