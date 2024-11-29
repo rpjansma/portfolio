@@ -1,0 +1,80 @@
+$primary-color: #007bff;
+$primary-hover: #0056b3;
+$border-color: #ddd;
+$background-color: #f9f9f9;
+$text-color: #666;
+$font-size-small: 12px;
+$font-size-normal: 14px;
+$font-size-large: 16px;
+
+@mixin button-style($bg-color, $hover-color) {
+  background-color: $bg-color;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 10px 20px;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+}
+
+// Estilos do componente
+.post-board {
+  max-width: 600px;
+  margin: 0 auto;
+
+  .post-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    input,
+    textarea {
+      margin-bottom: 10px;
+      padding: 10px;
+      font-size: $font-size-normal;
+      border: 1px solid $border-color;
+      border-radius: 5px;
+
+      &:focus {
+        outline: none;
+        border-color: $primary-color;
+      }
+    }
+
+    button {
+      align-self: flex-start;
+      @include button-style($primary-color, $primary-hover);
+    }
+  }
+
+  .posts {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    .post {
+      padding: 15px;
+      border: 1px solid $border-color;
+      border-radius: 5px;
+      background-color: $background-color;
+
+      .author {
+        font-size: $font-size-large;
+        font-weight: bold;
+      }
+
+      .content {
+        font-size: $font-size-normal;
+        margin: 10px 0;
+      }
+
+      .timestamp {
+        font-size: $font-size-small;
+        color: $text-color;
+      }
+    }
+  }
+}
