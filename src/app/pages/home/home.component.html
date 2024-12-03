@@ -1,111 +1,34 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-  </head>
-  <body>
-    <section id="home">
-      <div class="container mt-5" id="home">
-        <div class="row">
-          <div class="col-md-6">
-            <h1 class="display-4 mb-1 principal-greetings">Hey,</h1>
-            <h4 class="mb-4 second-greetings">
-              Let's build something awesome?
-            </h4>
+<html lang="en">
 
-            <p class="lead">
-              Hello, I'm Raul Paes, a seasoned software
-              engineer at PagBank. Offering a combination of cross-functional
-              skills with 5+ years of commercial experience in Web Development,
-              I specialize in crafting reliable, high-performance software
-              solutions that stand the test of time.
-            </p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <title>Portfolio</title>
+</head>
 
-            <p class="lead">
-              I dive deep into software architecture to ensure the systems are
-              both efficient and future ready. Committed to driving value for
-              both clients and stakeholders, collaborating to <b>make the product
-              shine!</b>
-            </p>
+<body>
+  <header>
+    <h1>Raul Paes</h1>
+    <h2>Software engineer for fintechs and beyond.</h2>
+    <p>
+      Offering 5+ years of expertise in crafting scalable and reliable solutions.
+      Let's build something amazing together.
+    </p>
+    <div class="cta-links">
+      <a href="https://www.linkedin.com/in/raul-paes" target="_blank">Email me</a>
+      <a href="https://github.com/rpjansma" target="_blank">GitHub</a>
+    </div>
+  </header>
 
-            <div class="mt-4 mb-4">
-              <a
-                href="https://www.linkedin.com/in/raul-paes"
-                target="_blank"
-                class="btn btn-primary me-2"
-                >LinkedIn</a
-              >
-              <a
-                href="https://github.com/rpjansma"
-                target="_blank"
-                class="btn btn-dark"
-                >GitHub</a
-              >
-            </div>
-          </div>
+  <section class="main-image">
+    <img src="../../../assets/dev.jpg" alt="Raul sitting in an inspiring workspace" />
+  </section>
 
-          <div class="col-md-6">
-            <form [formGroup]="emailForm" (ngSubmit)="open()">
-              <h3 class="mb-3">Contact me</h3>
+  <footer>
 
-              <div class="mb-3">
-                <label for="name" class="form-label">Your Name</label>
-                <input
-                  formControlName="name"
-                  type="text"
-                  class="form-control"
-                  id="name"
-                  placeholder="Name"
-                />
-                <error-message
-                  *ngIf="isRequiredAndTouched('name')"
-                  text="Name is required"
-                ></error-message>
-              </div>
+  </footer>
+</body>
 
-              <div class="mb-3">
-                <label for="message" class="form-label">Your Message</label>
-                <textarea
-                  formControlName="message"
-                  class="form-control"
-                  id="message"
-                  rows="4"
-                  placeholder="Write your message here"
-                ></textarea>
-                <error-message
-                  *ngIf="isRequiredAndTouched('message')"
-                  text="Message is required"
-                ></error-message>
-              </div>
-
-              <button
-                type="submit"
-                class="btn btn-success"
-                [attr.href]="
-                  'mailto:rpjansma@gmail.com?subject=' +
-                  'New Message From ' +
-                  emailForm.get('name')?.value +
-                  '&body=' +
-                  emailForm.get('message')?.value
-                "
-                onclick="window.open(this.getAttribute('href'), '_blank'); return false;"
-                [disabled]="emailForm.invalid"
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="bg-light py-5">
-      <projects></projects>
-    </section>
-
-    <section id="comments" class="py-5 bg-light">
-      <post-board></post-board>
-    </section>
-  </body>
 </html>
